@@ -240,8 +240,9 @@ $(function () {
                 });
                 wx.onMenuShareTimeline(option);
                 wx.onMenuShareQQ(option);
+                // 分享显示
                 wx.onMenuShareAppMessage({
-                    title: 'WeUI',
+                    title: '北京妇幼',
                     desc: '为微信 Web 服务量身设计',
                     link: location.href,
                     imgUrl: 'https://mmbiz.qpic.cn/mmemoticon/ajNVdqHZLLA16apETUPXh9Q5GLpSic7lGuiaic0jqMt4UY8P4KHSBpEWgM7uMlbxxnVR7596b3NPjUfwg7cFbfCtA/0'
