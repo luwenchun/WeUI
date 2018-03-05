@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
-    <title>北京妇幼</title>
+    <!-- <title>北京妇幼</title> -->
     <link rel="stylesheet" href="../style/weui.css"/>
     <link rel="stylesheet" href="../style/index.css"/>
     <link rel="stylesheet" href="./example.css"/>
+    <script>
+    document.title="健康教育";
+    </script>
 </head>
 <body ontouchstart>
     <div class="weui-toptips weui-toptips_warn js_tooltips">错误提示</div>
@@ -158,7 +161,7 @@
 </div>
 <script type="text/javascript">
     $(function(){
-       
+       document.title="健康教育";
         $('.weui-navbar__item').on('click', function () {
             $(this).addClass('weui-bar__item_on').siblings('.weui-bar__item_on').removeClass('weui-bar__item_on');
         });
