@@ -3,13 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
-    <!-- <title>北京妇幼</title> -->
+    <title>北京妇幼</title>
     <link rel="stylesheet" href="../style/weui.css"/>
     <link rel="stylesheet" href="../style/index.css"/>
     <link rel="stylesheet" href="./example.css"/>
-    <script>
-    document.title="北京妇幼";
-    </script>
 </head>
 <body ontouchstart>
     <div class="weui-toptips weui-toptips_warn js_tooltips">错误提示</div>
@@ -45,47 +42,48 @@
     $(function(){
         var winH = $(window).height();
         var categorySpace = 10;
+        
     // 页面跳转
         $('.weui-tabbar__item').on('click', function(){
             var id = $(this).data('id');
             window.pageManager.go(id);
         });
+
+       
         // 手风琴折叠
-        // $('.js_category').on('click', function(){
-        //     var $this = $(this),
-        //         $inner = $this.next('.js_categoryInner'),
-        //         $page = $this.parents('.page'),
-        //         $parent = $(this).parent('li');
-        //     var innerH = $inner.data('height');
-        //     bear = $page;
+        $('.js_category').on('click', function(){
+            var $this = $(this),
+                $inner = $this.next('.js_categoryInner'),
+                $page = $this.parents('.page'),
+                $parent = $(this).parent('li');
+            var innerH = $inner.data('height');
+            bear = $page;
 
-        //     if(!innerH){
-        //         $inner.css('height', 'auto');
-        //         innerH = $inner.height();
-        //         $inner.removeAttr('style');
-        //         $inner.data('height', innerH);
-        //     }
+            if(!innerH){
+                $inner.css('height', 'auto');
+                innerH = $inner.height();
+                $inner.removeAttr('style');
+                $inner.data('height', innerH);
+            }
 
-        //     if($parent.hasClass('js_show')){
-        //         $parent.removeClass('js_show');
-        //     }else{
-        //         $parent.siblings().removeClass('js_show');
+            if($parent.hasClass('js_show')){
+                $parent.removeClass('js_show');
+            }else{
+                $parent.siblings().removeClass('js_show');
 
-        //         $parent.addClass('js_show');
-        //         if(this.offsetTop + this.offsetHeight + innerH > $page.scrollTop() + winH){
-        //             var scrollTop = this.offsetTop + this.offsetHeight + innerH - winH + categorySpace;
+                $parent.addClass('js_show');
+                if(this.offsetTop + this.offsetHeight + innerH > $page.scrollTop() + winH){
+                    var scrollTop = this.offsetTop + this.offsetHeight + innerH - winH + categorySpace;
 
-        //             if(scrollTop > this.offsetTop){
-        //                 scrollTop = this.offsetTop - categorySpace;
-        //             }
+                    if(scrollTop > this.offsetTop){
+                        scrollTop = this.offsetTop - categorySpace;
+                    }
 
-        //             $page.scrollTop(scrollTop);
-        //         }
-        //     }
-        // });
-        $('.weui-tabbar__item').on('click', function () {
-            $(this).addClass('weui-bar__item_on').siblings('.weui-bar__item_on').removeClass('weui-bar__item_on');
+                    $page.scrollTop(scrollTop);
+                }
+            }
         });
+     
     });
 </script>
 </script>
@@ -257,39 +255,7 @@
             $(id).show().siblings(".weui-tab__body").hide();
             
         });
-        // 手风琴
-        //  $('.js_category').on('click', function(){
-        //     var $this = $(this),
-        //         $inner = $this.next('.js_categoryInner'),
-        //         $page = $this.parents('.page'),
-        //         $parent = $(this).parent('li');
-        //     var innerH = $inner.data('height');
-        //     bear = $page;
-
-        //     if(!innerH){
-        //         $inner.css('height', 'auto');
-        //         innerH = $inner.height();
-        //         $inner.removeAttr('style');
-        //         $inner.data('height', innerH);
-        //     }
-
-        //     if($parent.hasClass('js_show')){
-        //         $parent.removeClass('js_show');
-        //     }else{
-        //         $parent.siblings().removeClass('js_show');
-
-        //         $parent.addClass('js_show');
-        //         if(this.offsetTop + this.offsetHeight + innerH > $page.scrollTop() + winH){
-        //             var scrollTop = this.offsetTop + this.offsetHeight + innerH - winH + categorySpace;
-
-        //             if(scrollTop > this.offsetTop){
-        //                 scrollTop = this.offsetTop - categorySpace;
-        //             }
-
-        //             $page.scrollTop(scrollTop);
-        //         }
-        //     }
-        // });
+       
     });
 </script>
 </script>
@@ -322,7 +288,7 @@
     });
 </script>
 </script>
-    <script type="text/html" id="tpl_button">
+    <!-- <script type="text/html" id="tpl_button">
 <div class="page">
     <div class="page__hd">
         <h1 class="page__title">Button</h1>
@@ -1998,7 +1964,7 @@
         ;
     });
 </script>
-</script>
+</script> -->
     <script src="./zepto.min.js"></script>
     <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
     <script src="https://res.wx.qq.com/open/libs/weuijs/1.0.0/weui.min.js"></script>
