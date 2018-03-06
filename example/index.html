@@ -121,33 +121,34 @@
     document.title="健康教育"
 </script> -->
 <style scoped>
-    /* .weui-tab__panel{
-        display: none
-    } */
-    /* .weui-navbar__item{
-        padding-bottom: 0;
-        padding-top: 50px;
-    } */
+  
+    div[data-id*="#baby"]>img{
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    }
+    .weui-navbar__item.weui-bar__item_on{
+        background:url("./images/icon_01.png")no-repeat bottom center;
+        background-size:22px 6px;
+    }
+    .weui-cell_access .weui-cell__ft:after{
+        border-color: #ff6068;
+    }
 </style>
 <div class="page">
-        <!-- style="background:url('./images/banner-S.png')no-repeat -10px -40px" -->
-        <div class="page__hd" style="max-width:640px;overflow: hidden;margin: 0 auto;position:relative" >
-                    <div class="page__bg" style="position:absolute;top:0;left:0;width:100%;height:100%">
-                        <!-- <img src="./images/logo.png" alt="WeUI" height="21px" /> -->
-                        <img src="./images/banner-S.png" style="position:absolute;top:0;left:0;width:100%;height:100%" alt="">
-                    </div>
-              
+         <div class="page__hd" style="padding:0;max-width:100%">
+                <img src="./images/banner-S.png" style="max-width:100%">
          </div>
         <div class="weui-tab" style="height:auto">
             <div class="weui-navbar" style="position:relative">
-                <div class="weui-navbar__item weui-bar__item_on" data-id="#babybefore">
-                    孕前
+                <div class="weui-navbar__item weui-bar__item_on id_tabs" data-id="#babybefore">
+                    <img src="./images/icon_babybefore.png">孕前
                 </div>
                 <div class="weui-navbar__item" data-id="#babycenter">
-                    孕产期
+                    <img src="./images/icon_babycenter.png">孕产期
                 </div>
                 <div class="weui-navbar__item" data-id="#babyafter">
-                    婴儿期
+                    <img src="./images/icon_babyafter.png">婴儿期
                 </div>
             </div>
                 <div class="weui-tab__body" id="babybefore" style="display:block">
